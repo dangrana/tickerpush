@@ -3,7 +3,8 @@
   <div class="row">
 
     <div class="col-lg-10 col-lg-offset-1">
-      <img src="assets/images/hero.png" class="img-responsive">
+      <!-- <img src="assets/images/hero.png" class="img-responsive"> -->
+          <img src="assets/hero.png" class="img-responsive">
     </div>
 
   </div>
@@ -11,13 +12,37 @@
   <div class="row">
 
     <div class="col-lg-4 col-lg-offset-1">
-      <h1>
-        Filebox works the way you do
-      </h1>
 
-      <p>
-        Get to all your files from anywhere, on any device, and share them with anyone.
-      </p>
+      <% if current_user.present? %>
+      <li>
+        <a href="/users/edit">
+          <h1>
+            Logged in
+          </h1>
+
+          <p>
+            Logged in text
+          </p>
+        </a>
+      </li>
+
+      <% else %>
+      <li>
+        <a href="/users/edit">
+          <h1>
+            Logged out
+          </h1>
+
+          <p>
+            Logged out text
+          </p>
+        </a>
+        </li>
+      <% end %>
+
+
+
+
     </div>
 
     <div class="col-lg-4 col-lg-offset-2">
@@ -44,11 +69,6 @@
           <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
         </div>
 
-        <div class="checkbox">
-          <label>
-            <input type="checkbox"> I agree to <a href="#">Filebox terms</a>
-          </label>
-        </div>
 
         <button type="submit" class="btn btn-primary btn-block">
           Sign up for free
@@ -59,6 +79,9 @@
         <button type="submit" class="btn btn-primary btn-block">
           <i class="fa fa-fw fa-google"></i> Sign up free with Google
         </button>
+
+
       </form>
     </div>
   </div>
+</div>
