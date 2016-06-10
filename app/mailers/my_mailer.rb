@@ -9,7 +9,11 @@ class MyMailer < ActionMailer::Base
     mail(to: @user.email, subject: 'Welcome to My Awesome Site')
   end
 
+  def tickpush(user,darray)
+    @user = user
+    @darray = darray
+    mail(to: @user.email, subject: 'Tickerpush: '+@darray[0]+' '+@darray[1])
 
-
+  end
 
 end

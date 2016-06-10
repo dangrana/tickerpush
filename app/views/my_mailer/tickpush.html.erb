@@ -1,0 +1,16 @@
+<h1>Welcome to the site</h1>
+
+<p>Welcome <%= @user.email %>, hope you enjoy.</p>
+
+<h2><%=@darray[0]%>: <%=@darray[1] %> on <%=@darray[2]%></h2>
+
+<% if @darray[6] != nil %>
+<h2><%=@darray[3]%>: <%=@darray[4] %> on <%=@darray[5]%></h2>
+<h2><%=@darray[6]%>: <%=@darray[7] %> on <%=@darray[8]%></h2>
+
+<% elsif @darray[3] != nil %>
+<h2><%=@darray[3]%>: <%=@darray[4] %> on <%=@darray[5]%></h2>
+
+<% end %>
+
+<h3>Unsubscribe at WEBSITE</h3>
