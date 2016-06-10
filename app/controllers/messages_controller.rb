@@ -44,6 +44,6 @@ class MessagesController < ApplicationController
 
     # MyMailer.welcome_email(@user).deliver
     MyMailer.tickpush(@user,@darray).deliver
-    redirect_to "/users", :notice => "Update sent, "+@user.email
+    redirect_to "/", :notice => "Update sent, "+@user.email
   end
 end
