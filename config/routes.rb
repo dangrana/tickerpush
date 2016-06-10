@@ -20,7 +20,7 @@ get "/", :controller => "pages", :action => "main"
   get "/delete_user/:id", :controller => "users", :action => "destroy"
 
 
-  get "/send", :controller => "messages", :action => "mail"
+  get "/send/:id", :controller => "messages", :action => "mail"
 
 
   # The priority is based upon order of creation: first created -> highest priority.

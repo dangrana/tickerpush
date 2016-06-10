@@ -1,12 +1,8 @@
 class MessagesController < ApplicationController
 
   def mail
-    # @user = User.find(params[:id])
-    # @user = current_user
-    # @user = User.find_by_email('danmgrana@gmail.com')
-    # @user = User.find_by_email('danmgrana@gmail.com')
-    @user = User.find(current_user.id)
-    # MyMailer.welcome_email(@user).deliver
+    @user = User.find(params[:id])
+
 
     url="http://finance.google.com/finance/info?client=ig&q="+(@user.ticka || "")+","+(@user.tickb || "")+","+(@user.tickc || "")
 

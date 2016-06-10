@@ -17,7 +17,7 @@
       <h1>
         Send an update:
       </h1>
-      <form action="/send">
+      <form action="/send/<%= current_user.id %>">
         <input type="submit" value="Send email" class="btn btn-primary btn-block">
       </form>
 
