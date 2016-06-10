@@ -3,6 +3,9 @@ class MessagesController < ApplicationController
     # @user = User.find(params[:id])
     @user = current_user
     MyMailer.welcome_email(@user).deliver
-    redirect_to "/users", :notice => "Hi "+@user.email
+
+
+
+    redirect_to "/users", :notice => "Update sent, "+@user.email
   end
 end
