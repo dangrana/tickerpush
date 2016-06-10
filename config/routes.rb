@@ -9,8 +9,8 @@ get "/", :controller => "pages", :action => "main"
   post "/create_user", :controller => "users", :action => "create"
 
   # READ
-  get "/users", :controller => "users", :action => "index"
-  get "/users/:id", :controller => "users", :action => "show"
+  # get "/users", :controller => "users", :action => "index"
+  # get "/users/:id", :controller => "users", :action => "show"
 
   # UPDATE
   get "/users/:id/edit", :controller => "users", :action => "edit"
