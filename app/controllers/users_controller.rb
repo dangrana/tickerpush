@@ -24,15 +24,19 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find(params[:id])
+    @user.email = params[:email]
+
+
   end
 
   def update
     @user = User.find(params[:id])
-
-    @user.email = params[:email]
+@user.ticka = params[:ticka]
+@user.tickb = params[:tickb]
+@user.tickc = params[:tickc]
 
     if @user.save
-      redirect_to "/users", :notice => "User updated successfully."
+      redirect_to "/", :notice => "User updated successfully."
     else
       render 'edit'
     end
