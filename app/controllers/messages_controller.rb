@@ -1,4 +1,5 @@
 class MessagesController < ApplicationController
+
   def mail
     # @user = User.find(params[:id])
     # @user = current_user

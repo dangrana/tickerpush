@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   devise_for :users
   # devise_for :users, :controllers => {:registrations => "registrations"}
   # Routes for the User resource:
+
+get "/", :controller => "pages", :action => "main"
   # CREATE
   get "/users/new", :controller => "users", :action => "new"
   post "/create_user", :controller => "users", :action => "create"
